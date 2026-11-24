@@ -49,14 +49,24 @@ Evaluation reports component-wise MAE against (1) IMU labels, with no filtering 
 
 ## Representative trajectories and videos
 
-| Motion | Archived trial ID | Object / total mass [g] | Trajectory | IMU-label X / Y / Z MAE [N] |
+| Motion | Trial ID | Object / total mass [g] | Trajectory | IMU-label X / Y / Z MAE [N] |
 |---|---|---:|---|---|
 | Lateral U | `T0435_20261120-224456` | 270 / 286 | [7th, motion_006](trajectories/group1_lateral_u/motion_006/reference.csv) | 0.027 / 0.028 / 0.073 |
 | Fore-aft S | `T0445_20261120-224702` | 270 / 286 | [7th, motion_006](trajectories/group1_fore_aft_s/motion_006/reference.csv) | 0.028 / 0.035 / 0.050 |
 
 [U force plot](media/T0435_20261120-224456.png) · [S force plot](media/T0445_20261120-224702.png) · [Media mapping](media/representatives.json)
 
-Representative trajectory videos will be linked here with force plots. Trial IDs identify the data used for the force plots.
+Left: robot video. Center: end-effector trajectory from measured joint angles and FK. Right: M-imu force prediction (blue) and IMU force label (black). The trajectory marker and force cursor share the displayed data time.
+
+### Lateral U
+
+![Lateral U: robot video, end-effector trajectory, and force estimation](media/lateral_u_286g_trial07.gif)
+
+### Fore-aft S
+
+![Fore-aft S: robot video, end-effector trajectory, and force estimation](media/fore_aft_s_286g_trial07.gif)
+
+GIF generation: [script](scripts/make_demo_gifs.py), [timing anchors](media/alignment.json).
 
 ## NeuralActuator
 

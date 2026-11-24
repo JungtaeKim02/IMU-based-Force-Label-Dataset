@@ -7,9 +7,10 @@
     "trajectory_index": 7,
     "trajectory_file": "trajectories/group1_lateral_u/motion_006/reference.csv",
     "plot": "T0435_20261120-224456.png",
-    "video": null,
-    "video_motion_start_s": null,
-    "video_motion_end_s": null
+    "video": "lateral_u_286g_trial07.gif",
+    "video_motion_start_s": 3.48,
+    "video_motion_end_s": 9.36,
+    "alignment_file": "alignment.json"
   },
   {
     "trial_id": "T0445_20261120-224702",
@@ -19,8 +20,9 @@
     "trajectory_index": 7,
     "trajectory_file": "trajectories/group1_fore_aft_s/motion_006/reference.csv",
     "plot": "T0445_20261120-224702.png",
-    "video": null,
-    "video_motion_start_s": null,
-    "video_motion_end_s": null
+    "video": "fore_aft_s_286g_trial07.gif",
+    "video_motion_start_s": 0.0,
+    "video_motion_end_s": 6.24,
+    "alignment_file": "alignment.json"
   }
 ]
