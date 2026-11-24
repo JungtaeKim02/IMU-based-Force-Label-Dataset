@@ -43,4 +43,4 @@ The feature order is six values each of `goal_pos`, `pos`, `load`, `vel`, `volts
 
 `reference.csv` contains time in s, six joint coordinates in rad, commanded CoM position in m, velocity in m/s, and acceleration in m/s². These are commanded trajectories, not measured robot motion. `motion_000` is the first trajectory and `motion_006` is the seventh. The gripper reference is a placeholder; the recorded grasp is held during acquisition.
 
-`media/representatives.json` links the force-data trial IDs, trajectory files, and force plots.
+`media/` contains the two representative GIFs shown in the README.

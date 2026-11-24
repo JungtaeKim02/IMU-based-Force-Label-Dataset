@@ -1,4 +1,12 @@
-# IMU-based Force Label Dataset
+# Learning External Force Estimation on a Low-Cost Robot Arm with IMU-Based Dynamic Force Labels
+
+This research was conducted as an undergraduate capstone design thesis at Inha University.
+
+## Abstract
+
+This study investigates the effect of force-label construction on sensorless external force estimation for the low-cost SO-101 robot arm. Using identical NeuralActuator architectures and training settings, gravity-only and IMU-supervised models are compared. Dynamic 3D force labels are generated from known payload masses and gripper-mounted IMU measurements through calibration, synchronization, and center-of-mass compensation. The IMU is used only for labeling and excluded from inference. Experiments comprise 60 trajectories across three payloads and two motion types. Below 2 Hz, the corrected IMU labels agree with an encoder-based forward-kinematics (FK) reference, with vertical force-difference RMS values of 0.02–0.04 N. On eight held-out trials, the IMU-supervised model achieves unfiltered X/Y/Z MAEs of 0.055/0.065/0.150 N against IMU labels. Against the 2 Hz-filtered FK reference, its X/Y MAEs are 0.042/0.047 N, compared with 2.330/0.131 N for the gravity-supervised model. These results indicate improved low-frequency horizontal force estimation, while higher-frequency evaluation is limited to label reproduction.
+
+## Dataset
 
 SO-101 robot-arm recordings for sensorless external-force estimation: 60 trials, two motion families (lateral U and fore-aft S), and three payload masses. Each payload/motion condition contains 10 randomized trajectories. The object remains grasped throughout each trial.
 
@@ -36,14 +44,12 @@ python scripts/verify.py
 
 ```bash
 python scripts/build_labels.py
-python scripts/infer.py
-python scripts/evaluate.py --predictions outputs/predictions
-python scripts/plot_examples.py
+python scripts/evaluate.py
 ```
 
-Outputs are written under `outputs/`. Inference uses CPU. The model receives 42 servo features over nine frames and predicts the next timestamp; normalization uses the 44 training trials only. IMU signals are excluded from model inputs.
+Outputs are written under `outputs/`. The model receives 42 servo features over nine frames and predicts the next timestamp; normalization uses the 44 training trials only. IMU signals are excluded from model inputs.
 
-[Checkpoints and configuration](checkpoints) contain the NeuralActuator force/contact branch trained with force supervision without simulator rollout. M-grav supervises Z; evaluation retains its actual XYZ outputs. [Saved predictions](results/predictions), [per-condition MAEs](results/mae.csv), and [complete metrics](results/metrics.json) cover all eight test trials. Checkpoint selection uses validation data.
+[Saved predictions](results/predictions), [per-condition MAEs](results/mae.csv), and [complete metrics](results/metrics.json) cover all eight test trials.
 
 Evaluation reports component-wise MAE against (1) IMU labels, with no filtering beyond label preprocessing, and (2) an FK reference, with the same fourth-order zero-phase 2 Hz filter applied to reference and predictions. FK is a kinematic comparison based on joint measurements, not an independent F/T measurement. Overall values pool test samples rather than averaging trial MAEs.
 
@@ -54,8 +60,6 @@ Evaluation reports component-wise MAE against (1) IMU labels, with no filtering 
 | Lateral U | `T0435_20261120-224456` | 270 / 286 | [7th, motion_006](trajectories/group1_lateral_u/motion_006/reference.csv) | 0.027 / 0.028 / 0.073 |
 | Fore-aft S | `T0445_20261120-224702` | 270 / 286 | [7th, motion_006](trajectories/group1_fore_aft_s/motion_006/reference.csv) | 0.028 / 0.035 / 0.050 |
 
-[U force plot](media/T0435_20261120-224456.png) · [S force plot](media/T0445_20261120-224702.png) · [Media mapping](media/representatives.json)
-
 Left: robot video. Center: end-effector trajectory from measured joint angles and FK. Right: M-imu force prediction (blue) and IMU force label (black). The trajectory marker and force cursor share the displayed data time.
 
 ### Lateral U
@@ -65,8 +69,6 @@ Left: robot video. Center: end-effector trajectory from measured joint angles an
 ### Fore-aft S
 
 ![Fore-aft S: robot video, end-effector trajectory, and force estimation](media/fore_aft_s_286g_trial07.gif)
-
-GIF generation: [script](scripts/make_demo_gifs.py), [timing anchors](media/alignment.json).
 
 ## NeuralActuator
 
