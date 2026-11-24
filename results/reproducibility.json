@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "trials": 60,
+  "split": {
+    "train": 44,
+    "validation": 8,
+    "test": 8
+  },
+  "motion_samples": 44637,
+  "test_prediction_samples": 5949,
+  "train_only_normalization_verified": true,
+  "code_comments": 0,
+  "label_regeneration_trials": 60,
+  "label_regeneration_max_difference_N": 0.0,
+  "inference_trials": 8,
+  "inference_max_difference_N": 1.3322676295501878e-15,
+  "raw_csv_files": 180,
+  "raw_csv_byte_identical_to_acquisition": true
+}

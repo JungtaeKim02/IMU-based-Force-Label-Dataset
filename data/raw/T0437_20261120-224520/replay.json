@@ -1,0 +1,29 @@
+{
+  "motion": "group1_lateral_u/motion_008",
+  "source": "trajectories/group1_lateral_u/motion_008/reference.csv",
+  "script_t0_ns": 12690748551227,
+  "approach_s": [
+    0.0,
+    2.0
+  ],
+  "reference_start_s": 3.5,
+  "reference_end_s": 10.49,
+  "training_window_s": [
+    3.5,
+    10.49
+  ],
+  "note": "times are seconds after script_t0_ns (Mac monotonic clock)",
+  "time_scale": 1.0,
+  "q_start_deg": [
+    39.252747252747255,
+    -50.85714285714286,
+    20.351648351648354,
+    32.13186813186813,
+    -14.197802197802199,
+    50.50549450549451
+  ],
+  "gripper_fixed_deg": 50.50549450549451,
+  "gripper_start_deg": 50.50549450549451,
+  "grip_squeeze_deg": 0.0,
+  "scene": "table behind base, open in front (model/scene.xml)"
+}

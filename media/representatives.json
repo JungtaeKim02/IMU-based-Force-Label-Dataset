@@ -1,0 +1,26 @@
+[
+  {
+    "trial_id": "T0435_20261120-224456",
+    "motion_type": "lateral_u",
+    "object_mass_g": 270,
+    "total_mass_g": 286,
+    "trajectory_index": 7,
+    "trajectory_file": "trajectories/group1_lateral_u/motion_006/reference.csv",
+    "plot": "T0435_20261120-224456.png",
+    "video": null,
+    "video_motion_start_s": null,
+    "video_motion_end_s": null
+  },
+  {
+    "trial_id": "T0445_20261120-224702",
+    "motion_type": "fore_aft_s",
+    "object_mass_g": 270,
+    "total_mass_g": 286,
+    "trajectory_index": 7,
+    "trajectory_file": "trajectories/group1_fore_aft_s/motion_006/reference.csv",
+    "plot": "T0445_20261120-224702.png",
+    "video": null,
+    "video_motion_start_s": null,
+    "video_motion_end_s": null
+  }
+]

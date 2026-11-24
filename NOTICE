@@ -1,0 +1,3 @@
+scripts/model.py is derived from NeuralActuator by The NeuralActuator Authors (2026), under the MIT license in licenses/NeuralActuator-MIT.txt.
+kinematics/scene.xml preserves the SO-101 body, joint, and reference-point transforms from the acquisition model, with visual and collision geometry removed. The source SO-101 model is distributed under licenses/SO101-Apache-2.0.txt. It is used here for forward kinematics only.
+The Crazyflie board transforms retained in kinematics/scene.xml originate from the model distributed under licenses/Crazyflie-MIT.txt.

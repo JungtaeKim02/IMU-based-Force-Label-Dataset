@@ -1,0 +1,773 @@
+{
+  "id": "T0466_20261120-225401",
+  "num": 466,
+  "label": "replay group2_fore_aft_s/motion_007 [payload 405g]",
+  "state": "ready",
+  "auto": false,
+  "reason": "manual",
+  "started_unix": 1795182840.018041,
+  "t0_ns": 13209889537846,
+  "clock_anchor": {
+    "unix_ns": 1795182182023738277,
+    "mono_ns": 12551895235200
+  },
+  "host_clock": "time.monotonic_ns (macOS)",
+  "joint_names": [
+    "shoulder_pan",
+    "shoulder_lift",
+    "elbow_flex",
+    "wrist_flex",
+    "wrist_roll",
+    "gripper"
+  ],
+  "servo_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "calib": {
+    "follower": {
+      "port": "/dev/ttyACM0",
+      "ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "voltage": 12.0,
+      "range_min": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "range_max": [
+        4095,
+        4095,
+        4095,
+        4095,
+        4095,
+        4095
+      ],
+      "mid": [
+        2047.5,
+        2047.5,
+        2047.5,
+        2047.5,
+        2047.5,
+        2047.5
+      ],
+      "calibrated": false,
+      "servo_config": {
+        "1": {
+          "firmware": "3.10",
+          "model": 777,
+          "return_delay": 0,
+          "min_limit": 0,
+          "max_limit": 4095,
+          "max_torque": 1000,
+          "p_coef": 16,
+          "d_coef": 24,
+          "i_coef": 0,
+          "protection_current": 310,
+          "homing_offset": -1755,
+          "operating_mode": 0,
+          "overload_torque": 80
+        },
+        "2": {
+          "firmware": "3.10",
+          "model": 777,
+          "return_delay": 0,
+          "min_limit": 0,
+          "max_limit": 4095,
+          "max_torque": 1000,
+          "p_coef": 24,
+          "d_coef": 32,
+          "i_coef": 0,
+          "protection_current": 310,
+          "homing_offset": -1217,
+          "operating_mode": 0,
+          "overload_torque": 80
+        },
+        "3": {
+          "firmware": "3.10",
+          "model": 777,
+          "return_delay": 0,
+          "min_limit": 0,
+          "max_limit": 4095,
+          "max_torque": 1000,
+          "p_coef": 24,
+          "d_coef": 32,
+          "i_coef": 0,
+          "protection_current": 310,
+          "homing_offset": -1805,
+          "operating_mode": 0,
+          "overload_torque": 80
+        },
+        "4": {
+          "firmware": "3.10",
+          "model": 777,
+          "return_delay": 0,
+          "min_limit": 0,
+          "max_limit": 4095,
+          "max_torque": 1000,
+          "p_coef": 64,
+          "d_coef": 16,
+          "i_coef": 0,
+          "protection_current": 310,
+          "homing_offset": -335,
+          "operating_mode": 0,
+          "overload_torque": 80
+        },
+        "5": {
+          "firmware": "3.10",
+          "model": 777,
+          "return_delay": 0,
+          "min_limit": 0,
+          "max_limit": 4095,
+          "max_torque": 1000,
+          "p_coef": 64,
+          "d_coef": 0,
+          "i_coef": 0,
+          "protection_current": 310,
+          "homing_offset": -1518,
+          "operating_mode": 0,
+          "overload_torque": 80
+        },
+        "6": {
+          "firmware": "3.10",
+          "model": 777,
+          "return_delay": 0,
+          "min_limit": 0,
+          "max_limit": 4095,
+          "max_torque": 1000,
+          "p_coef": 32,
+          "d_coef": 32,
+          "i_coef": 0,
+          "protection_current": 310,
+          "homing_offset": 1086,
+          "operating_mode": 0,
+          "overload_torque": 80
+        }
+      }
+    }
+  },
+  "arm_status": {
+    "mode": "hw",
+    "follower": {
+      "connected": true,
+      "port": "/dev/ttyACM0",
+      "ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "missing": [],
+      "voltage": 12.0,
+      "calibrated": false
+    },
+    "leader": {
+      "connected": false,
+      "disabled": true
+    },
+    "teleop": "hold",
+    "soft_start": false,
+    "script_t0_ns": null,
+    "script_progress": null,
+    "message": "자동 동작 완료: 자세 유지",
+    "port_notes": {}
+  },
+  "cf_status": {
+    "mode": "hw",
+    "state": "connected",
+    "uri": "radio://0/80/2M/E7E7E7E7E8",
+    "message": "연결됨 radio://0/80/2M/E7E7E7E7E8",
+    "battery_v": 3.842815399169922,
+    "link_quality": 100.0,
+    "has_att": true
+  },
+  "sim": false,
+  "config": {
+    "follower_port": "auto",
+    "leader_port": "none",
+    "baudrate": 1000000,
+    "servo_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "joint_names": [
+      "shoulder_pan",
+      "shoulder_lift",
+      "elbow_flex",
+      "wrist_flex",
+      "wrist_roll",
+      "gripper"
+    ],
+    "arm_rate_hz": 100.0,
+    "follower_min_voltage": 8.0,
+    "teleop_autostart": false,
+    "teleop_mapping": "range",
+    "follower_acceleration": 254,
+    "soft_start_max_dps": 60.0,
+    "soft_start_timeout_s": 5.0,
+    "cf_enabled": true,
+    "cf_uri": "radio://0/80/2M/E7E7E7E7E8",
+    "imu_period_ms": 10,
+    "imu_latency_ms": 0.0,
+    "payload_mass_g": 405.0,
+    "accel_point": "payload",
+    "auto_trial": true,
+    "motion_window_s": 0.2,
+    "motion_thresh_deg": 1.5,
+    "idle_stop_s": 3.0,
+    "pre_roll_s": 1.0,
+    "standby_after_s": 60.0,
+    "replay_library": "traj2",
+    "replay_sets": [
+      "group1_lateral_u",
+      "group1_fore_aft_s",
+      "group2_lateral_u",
+      "group2_fore_aft_s",
+      "group3_lateral_u",
+      "group3_fore_aft_s"
+    ],
+    "campaign_sets": [],
+    "campaign_groups": {
+      "1": [
+        "group1_lateral_u",
+        "group1_fore_aft_s"
+      ],
+      "2": [
+        "group2_lateral_u",
+        "group2_fore_aft_s"
+      ],
+      "3": [
+        "group3_lateral_u",
+        "group3_fore_aft_s"
+      ]
+    },
+    "replay_time_scale": 1.0,
+    "loaded_dir": "loaded_traj2",
+    "host": "0.0.0.0",
+    "port": 8080,
+    "allow_remote_control": false,
+    "data_dir": "data",
+    "live_window_s": 15.0
+  },
+  "align_calib": {
+    "R_gi": [
+      [
+        -0.2172497159449924,
+        -0.06897226647613418,
+        -0.9736762230736482
+      ],
+      [
+        -0.0031191684932215477,
+        0.9975444258175535,
+        -0.06996705873650634
+      ],
+      [
+        0.9761110754979324,
+        -0.012163263438402188,
+        -0.21693137927187278
+      ]
+    ],
+    "p_gi": [
+      -0.03378522226374084,
+      -0.006576726851473109,
+      -0.07430577354525743
+    ],
+    "p_source": "estimated",
+    "p_estimated": [
+      -0.03378522226374084,
+      -0.006576726851473109,
+      -0.07430577354525743
+    ],
+    "p_nominal": [
+      -0.03395547831751366,
+      -0.006310073342079278,
+      -0.0705177478137711
+    ],
+    "p_split_halves_mm": [
+      -33.6,
+      -5.8,
+      -73.7,
+      -34.3,
+      -6.8,
+      -76.0
+    ],
+    "p_split_diff_mm": 2.6661638681610627,
+    "p_from_nominal_mm": 3.8012143007624397,
+    "fit_lpf_hz": 3.0,
+    "R_nominal": [
+      [
+        -0.2187557397123986,
+        -0.07318755893752364,
+        -0.9730310928020992
+      ],
+      [
+        -0.0026587254669038496,
+        0.9972242233654237,
+        -0.0744095391204566
+      ],
+      [
+        0.9757760283598754,
+        -0.013690491225431922,
+        -0.21834310826823322
+      ]
+    ],
+    "angle_from_nominal_deg": 0.2715992337173735,
+    "gyro_bias_dps": [
+      0.01550535395691966,
+      -0.1510049029233873,
+      -0.018246393672961596
+    ],
+    "acc_bias_g": [
+      0.001482561195311973,
+      -0.012902877215806362,
+      -0.00660277503484698
+    ],
+    "acc_scale": [
+      0.992846498807056,
+      0.994555345687714,
+      0.9856377727689496
+    ],
+    "n_static_poses": 25,
+    "lag_ms": 7.417608780807637,
+    "lag_info": {
+      "lag_ms": 7.417608780807637,
+      "r2": 0.9918925964428342,
+      "corr": 0.9959380484964083,
+      "method": "lstsq(|gyro|^2 ~ qd^T M qd)",
+      "reliable": true
+    },
+    "acc_extra_lag_ms": 4.7,
+    "joint_map": {
+      "sign": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "offset_deg": [
+        0.0,
+        0.0,
+        0.0,
+        -4.600000000000001,
+        0.0,
+        0.0
+      ]
+    },
+    "pitch_offset_deg": -0.5999999999999988,
+    "residuals": {
+      "gyro_rms_dps": 1.1187601656385517,
+      "gravity_rms_deg": 1.986443721087975,
+      "gyro_rms_dps_unfiltered": 3.5301497406244025,
+      "acc_rms_mps2": 0.32054544585557115,
+      "n_samples": 17910,
+      "n_static": 3250,
+      "lever_sv_min": 2.1226123270399047
+    },
+    "sign_warnings": [],
+    "quality": "good",
+    "id": "align_20261120-212404",
+    "created_unix": 1795177444.9055338,
+    "trial_id": "T0416_20261120-212058",
+    "segments": [
+      {
+        "kind": "static",
+        "t0": 1.019069175,
+        "t1": 3.2190691750000004,
+        "label": "정지 자세 1"
+      },
+      {
+        "kind": "move",
+        "t0": 3.2190691750000004,
+        "t1": 9.469069175,
+        "label": "정지 자세 2로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 9.469069175,
+        "t1": 11.669069174999999,
+        "label": "정지 자세 2"
+      },
+      {
+        "kind": "move",
+        "t0": 11.669069174999999,
+        "t1": 13.752402508333333,
+        "label": "정지 자세 3로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 13.752402508333333,
+        "t1": 15.952402508333334,
+        "label": "정지 자세 3"
+      },
+      {
+        "kind": "move",
+        "t0": 15.952402508333334,
+        "t1": 18.035735841666664,
+        "label": "정지 자세 4로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 18.035735841666664,
+        "t1": 20.235735841666664,
+        "label": "정지 자세 4"
+      },
+      {
+        "kind": "move",
+        "t0": 20.235735841666664,
+        "t1": 24.40240250833333,
+        "label": "정지 자세 5로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 24.40240250833333,
+        "t1": 26.60240250833333,
+        "label": "정지 자세 5"
+      },
+      {
+        "kind": "move",
+        "t0": 26.60240250833333,
+        "t1": 28.685735841666663,
+        "label": "정지 자세 6로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 28.685735841666663,
+        "t1": 30.885735841666662,
+        "label": "정지 자세 6"
+      },
+      {
+        "kind": "move",
+        "t0": 30.885735841666662,
+        "t1": 32.969069174999994,
+        "label": "정지 자세 7로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 32.969069174999994,
+        "t1": 35.169069175,
+        "label": "정지 자세 7"
+      },
+      {
+        "kind": "move",
+        "t0": 35.169069175,
+        "t1": 47.669069175,
+        "label": "정지 자세 8로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 47.669069175,
+        "t1": 49.869069175,
+        "label": "정지 자세 8"
+      },
+      {
+        "kind": "move",
+        "t0": 49.869069175,
+        "t1": 51.952402508333336,
+        "label": "정지 자세 9로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 51.952402508333336,
+        "t1": 54.15240250833334,
+        "label": "정지 자세 9"
+      },
+      {
+        "kind": "move",
+        "t0": 54.15240250833334,
+        "t1": 56.235735841666674,
+        "label": "정지 자세 10로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 56.235735841666674,
+        "t1": 58.43573584166668,
+        "label": "정지 자세 10"
+      },
+      {
+        "kind": "move",
+        "t0": 58.43573584166668,
+        "t1": 60.51906917500001,
+        "label": "정지 자세 11로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 60.51906917500001,
+        "t1": 62.719069175000016,
+        "label": "정지 자세 11"
+      },
+      {
+        "kind": "move",
+        "t0": 62.719069175000016,
+        "t1": 64.80240250833336,
+        "label": "정지 자세 12로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 64.80240250833336,
+        "t1": 67.00240250833335,
+        "label": "정지 자세 12"
+      },
+      {
+        "kind": "move",
+        "t0": 67.00240250833335,
+        "t1": 69.08573584166668,
+        "label": "정지 자세 13로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 69.08573584166668,
+        "t1": 71.28573584166668,
+        "label": "정지 자세 13"
+      },
+      {
+        "kind": "move",
+        "t0": 71.28573584166668,
+        "t1": 73.369069175,
+        "label": "정지 자세 14로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 73.369069175,
+        "t1": 75.56906917500001,
+        "label": "정지 자세 14"
+      },
+      {
+        "kind": "move",
+        "t0": 75.56906917500001,
+        "t1": 88.06906917500001,
+        "label": "정지 자세 15로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 88.06906917500001,
+        "t1": 90.26906917500001,
+        "label": "정지 자세 15"
+      },
+      {
+        "kind": "move",
+        "t0": 90.26906917500001,
+        "t1": 92.35240250833334,
+        "label": "정지 자세 16로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 92.35240250833334,
+        "t1": 94.55240250833334,
+        "label": "정지 자세 16"
+      },
+      {
+        "kind": "move",
+        "t0": 94.55240250833334,
+        "t1": 96.63573584166667,
+        "label": "정지 자세 17로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 96.63573584166667,
+        "t1": 98.83573584166668,
+        "label": "정지 자세 17"
+      },
+      {
+        "kind": "move",
+        "t0": 98.83573584166668,
+        "t1": 100.919069175,
+        "label": "정지 자세 18로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 100.919069175,
+        "t1": 103.119069175,
+        "label": "정지 자세 18"
+      },
+      {
+        "kind": "move",
+        "t0": 103.119069175,
+        "t1": 105.20240250833334,
+        "label": "정지 자세 19로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 105.20240250833334,
+        "t1": 107.40240250833334,
+        "label": "정지 자세 19"
+      },
+      {
+        "kind": "move",
+        "t0": 107.40240250833334,
+        "t1": 109.48573584166667,
+        "label": "정지 자세 20로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 109.48573584166667,
+        "t1": 111.68573584166667,
+        "label": "정지 자세 20"
+      },
+      {
+        "kind": "move",
+        "t0": 111.68573584166667,
+        "t1": 113.769069175,
+        "label": "정지 자세 21로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 113.769069175,
+        "t1": 115.969069175,
+        "label": "정지 자세 21"
+      },
+      {
+        "kind": "move",
+        "t0": 115.969069175,
+        "t1": 120.344069175,
+        "label": "정지 자세 22로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 120.344069175,
+        "t1": 122.544069175,
+        "label": "정지 자세 22"
+      },
+      {
+        "kind": "move",
+        "t0": 122.544069175,
+        "t1": 126.919069175,
+        "label": "정지 자세 23로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 126.919069175,
+        "t1": 129.119069175,
+        "label": "정지 자세 23"
+      },
+      {
+        "kind": "move",
+        "t0": 129.119069175,
+        "t1": 135.369069175,
+        "label": "정지 자세 24로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 135.369069175,
+        "t1": 137.56906917499998,
+        "label": "정지 자세 24"
+      },
+      {
+        "kind": "move",
+        "t0": 137.56906917499998,
+        "t1": 141.31906917499998,
+        "label": "정지 자세 25로 이동"
+      },
+      {
+        "kind": "static",
+        "t0": 141.31906917499998,
+        "t1": 143.51906917499997,
+        "label": "정지 자세 25"
+      },
+      {
+        "kind": "excite",
+        "t0": 143.51906917499997,
+        "t1": 149.51906917499997,
+        "label": "wrist_roll 흔들기"
+      },
+      {
+        "kind": "excite",
+        "t0": 149.51906917499997,
+        "t1": 154.51906917499997,
+        "label": "wrist_flex 흔들기"
+      },
+      {
+        "kind": "excite",
+        "t0": 154.51906917499997,
+        "t1": 159.51906917499997,
+        "label": "elbow 흔들기"
+      },
+      {
+        "kind": "excite",
+        "t0": 159.51906917499997,
+        "t1": 164.51906917499997,
+        "label": "shoulder_lift 흔들기"
+      },
+      {
+        "kind": "excite",
+        "t0": 164.51906917499997,
+        "t1": 169.51906917499997,
+        "label": "shoulder_pan 흔들기"
+      },
+      {
+        "kind": "excite",
+        "t0": 169.51906917499997,
+        "t1": 179.51906917499997,
+        "label": "전체 섞기"
+      },
+      {
+        "kind": "static",
+        "t0": 179.51906917499997,
+        "t1": 180.51906917499997,
+        "label": "완료"
+      }
+    ],
+    "model": "scene.xml",
+    "q_start_deg": [
+      -5.758241758241759,
+      -43.032967032967036,
+      16.30769230769231,
+      23.956043956043956,
+      2.5054945054945055,
+      1.978021978021978
+    ],
+    "sim": false
+  },
+  "payload_mass_g": 405.0,
+  "stopped_unix": 1795182853.6171103,
+  "stop_reason": "manual",
+  "end_ns": 13223488607125,
+  "duration_s": 13.589887803,
+  "n_arm": 1351,
+  "n_imu": 1360,
+  "n_att": 1361,
+  "arm_rate_hz": 99.99717507980331,
+  "arm_dt_p99_ms": 10.96747374000008,
+  "imu_rate_hz": 100.05171811227379,
+  "imu_coverage": 0.9985196150999259,
+  "clock_fit": {
+    "n": 2721,
+    "bins": 14,
+    "bins_used": 14,
+    "drift_ppm": -516.9137890749355,
+    "envelope_jitter_ms": 0.1487523869830003,
+    "rx_excess_median_ms": 0.8768965824274346,
+    "rx_excess_p95_ms": 1.5897591608809307,
+    "segments": 1
+  },
+  "imu_lag": {
+    "lag_ms": 19.99652682166428,
+    "r2": 0.9840840274849645,
+    "corr": 0.9920100944471102,
+    "method": "lstsq(|gyro|^2 ~ qd^T M qd)",
+    "reliable": true,
+    "lag_ms_after_correction": 19.99652682166428
+  },
+  "finalized_unix": 1795182853.8589687,
+  "max_temp_C": 150.0
+}

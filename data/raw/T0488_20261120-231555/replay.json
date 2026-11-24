@@ -1,0 +1,29 @@
+{
+  "motion": "group3_fore_aft_s/motion_008",
+  "source": "trajectories/group3_fore_aft_s/motion_008/reference.csv",
+  "script_t0_ns": 14525807131751,
+  "approach_s": [
+    0.0,
+    2.0
+  ],
+  "reference_start_s": 3.5,
+  "reference_end_s": 11.21,
+  "training_window_s": [
+    3.5,
+    11.21
+  ],
+  "note": "times are seconds after script_t0_ns (Mac monotonic clock)",
+  "time_scale": 1.0,
+  "q_start_deg": [
+    25.362637362637365,
+    -84.52747252747254,
+    31.164835164835168,
+    55.604395604395606,
+    13.406593406593407,
+    93.05494505494507
+  ],
+  "gripper_fixed_deg": 93.05494505494507,
+  "gripper_start_deg": 93.05494505494507,
+  "grip_squeeze_deg": 0.0,
+  "scene": "table behind base, open in front (model/scene.xml)"
+}

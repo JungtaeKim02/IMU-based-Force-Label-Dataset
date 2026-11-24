@@ -1,0 +1,43 @@
+from pathlib import Path
+import json
+import numpy as np
+import pandas as pd
+from scipy.signal import butter, filtfilt
+
+ROOT = Path(__file__).resolve().parents[1]
+AXES = list('xyz')
+FEATURE_COLUMNS = [f'{prefix}{i}' for prefix in ['goal_pos', 'pos', 'load', 'vel', 'volts', 'temp'] for i in range(1, 7)]
+STD_FLOOR = np.array([.05] * 12 + [1.] * 24 + [.05] * 6, dtype=np.float32)
+
+
+def manifest(root=ROOT):
+    return pd.read_csv(Path(root) / 'manifest.csv').sort_values('trial_id')
+
+
+def force(frame, prefix='force_'):
+    return frame[[prefix + axis for axis in AXES]].to_numpy(dtype=np.float64)
+
+
+def features(frame):
+    raw = frame[FEATURE_COLUMNS].to_numpy(dtype=np.float64)
+    return np.concatenate([raw, raw[:, :6] - raw[:, 6:12]], axis=1)
+
+
+def windows(frame, normalization):
+    raw = features(frame)
+    mean = np.asarray(normalization['feature_mean'], dtype=np.float32)
+    std = np.asarray(normalization['feature_std'], dtype=np.float32)
+    normalized = np.clip((raw - mean) / std, -10, 10).astype(np.float32)
+    padded = np.pad(normalized, ((8, 0), (0, 0)))
+    return np.ascontiguousarray(np.lib.stride_tricks.sliding_window_view(padded, 9, axis=0).transpose(0, 2, 1)[:-1])
+
+
+def lowpass(values, cutoff=2.0):
+    b, a = butter(4, cutoff / 50.)
+    return filtfilt(b, a, values, axis=0, padtype='odd', padlen=3 * max(len(a), len(b)))
+
+
+def dump(path, value):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, indent=2, allow_nan=False) + '\n')
